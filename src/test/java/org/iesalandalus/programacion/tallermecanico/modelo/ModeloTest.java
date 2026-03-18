@@ -1,7 +1,6 @@
 package org.iesalandalus.programacion.tallermecanico.modelo;
 
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
-import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Revision;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Vehiculo;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.Clientes;
 import org.iesalandalus.programacion.tallermecanico.modelo.negocio.Revisiones;
@@ -22,7 +21,7 @@ import static org.mockito.Mockito.*;
 class ModeloTest {
 
     @Mock
-    private static Clientes clientes;
+    private static Cliente clientes;
     @Mock
     private static Vehiculos vehiculos;
     @Mock
@@ -36,7 +35,7 @@ class ModeloTest {
 
     private AutoCloseable procesadorAnotaciones;
     private MockedConstruction<Cliente> controladorCreacionMockCliente;
-    private MockedConstruction<Clientes> controladorCreacionMockClientes;
+    private MockedConstruction<Cliente> controladorCreacionMockClientes;
     private MockedConstruction<Vehiculos> controladorCreacionMockVehiculos;
     private MockedConstruction<Revision> controladorCreacionMockRevision;
     private MockedConstruction<Revisiones> controladorCreacionMockRevisiones;
@@ -61,7 +60,7 @@ class ModeloTest {
     @BeforeEach
     void init() {
         controladorCreacionMockCliente = mockConstruction(Cliente.class);
-        controladorCreacionMockClientes = mockConstruction(Clientes.class);
+        controladorCreacionMockClientes = mockConstruction(Cliente.class);
         controladorCreacionMockVehiculos = mockConstruction(Vehiculos.class);
         controladorCreacionMockRevision = mockConstruction(Revision.class);
         controladorCreacionMockRevisiones = mockConstruction(Revisiones.class);

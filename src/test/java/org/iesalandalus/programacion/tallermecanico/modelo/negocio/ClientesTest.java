@@ -1,6 +1,5 @@
 package org.iesalandalus.programacion.tallermecanico.modelo.negocio;
 
-import org.iesalandalus.programacion.tallermecanico.modelo.TallerMecanicoExcepcion;
 import org.iesalandalus.programacion.tallermecanico.modelo.dominio.Cliente;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -15,11 +14,11 @@ class ClientesTest {
 
     private static Cliente cliente1;
     private static Cliente cliente2;
-    private Clientes clientes;
+    private Cliente clientes;
 
     @BeforeEach
     void init() {
-        clientes = new Clientes();
+        clientes = new Cliente();
         cliente1 = mock();
         when(cliente1.getDni()).thenReturn("11223344B");
         cliente2 = mock();
